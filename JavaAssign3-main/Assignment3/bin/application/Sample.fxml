@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+   <center>
+      <TabPane prefHeight="705.0" prefWidth="903.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab fx:id="tabHome" text="Home">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Text fx:id="txtSearch" layoutX="45.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search Inventory:" wrappingWidth="115.025390625" />
+                        <RadioButton fx:id="rbSerNum" layoutX="35.0" layoutY="103.0" mnemonicParsing="false" onAction="#rbSerHandler" text="Serial Number">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="rb1" />
+                           </toggleGroup></RadioButton>
+                        <RadioButton fx:id="rbName" layoutX="160.0" layoutY="103.0" mnemonicParsing="false" onAction="#rbNameHandler" text="Name" toggleGroup="$rb1" />
+                        <RadioButton fx:id="rbType" layoutX="250.0" layoutY="103.0" mnemonicParsing="false" onAction="#rbTypeHandler" text="Type" toggleGroup="$rb1" />
+                        <Text fx:id="txtSerNun" layoutX="45.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Serial Number " />
+                        <Text fx:id="txtName" layoutX="45.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+                        <Text fx:id="txtType" layoutX="48.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type" />
+                        <TextField fx:id="tfSerNum" layoutX="139.0" layoutY="146.0" />
+                        <TextField fx:id="tfName" layoutX="139.0" layoutY="190.0" />
+                        <TextField fx:id="tfType" layoutX="139.0" layoutY="236.0" />
+                        <Button fx:id="btnSearch" layoutX="77.0" layoutY="351.0" mnemonicParsing="false" text="Search" />
+                        <Button fx:id="btnClear" layoutX="198.0" layoutY="351.0" mnemonicParsing="false" text="Clear" />
+                        <ListView fx:id="lvHome" layoutX="452.0" layoutY="90.0" prefHeight="374.0" prefWidth="369.0" />
+                        <Line endX="268.0" endY="-1.0" layoutX="553.0" layoutY="465.0" startX="-100.0" />
+                        <Line endX="-100.0" endY="183.0" layoutX="551.0" layoutY="284.0" startX="-99.0" startY="-194.0" />
+                        <Line endX="267.0" endY="1.0" layoutX="554.0" layoutY="89.0" startX="-100.0" />
+                        <Line endX="-99.29296875" endY="374.29290771484375" layoutX="921.0" layoutY="89.0" startX="-100.0" />
+                        <Text layoutX="310.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to Toy Store Company">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Text>
+                        <Button layoutX="570.0" layoutY="515.0" mnemonicParsing="false" text="Buy">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="tabAddToy" text="Add Toy">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="679.0" prefWidth="914.0">
+                     <children>
+                        <Text fx:id="txtEnter" layoutX="55.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter New Toy Information">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="txtCategory" layoutX="15.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Category">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="txtSN" layoutX="17.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Serial Number">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="txtName" layoutX="25.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="txtBrand" layoutX="25.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Brand">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="txtPrice" layoutX="25.0" layoutY="297.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="txtAvailCount" layoutX="25.0" layoutY="343.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Available Count">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="txtAgeAppr" layoutX="24.0" layoutY="385.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Age-appropriate">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="tfSN" layoutX="148.0" layoutY="139.0" />
+                        <TextField fx:id="tfName" layoutX="148.0" layoutY="179.0" />
+                        <TextField fx:id="tfBrand" layoutX="148.0" layoutY="228.0" />
+                        <TextField fx:id="tfPrice" layoutX="148.0" layoutY="279.0" />
+                        <TextField fx:id="tfAvailCount" layoutX="148.0" layoutY="326.0" />
+                        <TextField fx:id="tfAgeAppr" layoutX="148.0" layoutY="367.0" />
+                        <Line endX="159.0" layoutX="141.0" layoutY="88.0" startX="-100.0" />
+                        <Line endX="-100.0" endY="322.0" layoutX="433.0" layoutY="94.0" startX="-100.0" />
+                        <Text fx:id="txtFig" layoutX="440.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Figure">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="txtAnimal" layoutX="722.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Animal">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="txtPuzzle" layoutX="439.0" layoutY="356.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Puzzle">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="txtBoardGame" layoutX="722.0" layoutY="356.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Board Game">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Line endX="-100.0" endY="600.0" layoutX="700.0" layoutY="21.0" startX="-100.0" />
+                        <Line endX="259.0" layoutX="607.0" layoutY="314.0" startX="-253.0" />
+                        <Text fx:id="txtClass" layoutX="411.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Classification">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="tfClass" layoutX="388.0" layoutY="201.0" />
+                        <Line endX="27.0" layoutX="468.0" layoutY="113.0" startX="-40.0" />
+                        <Line endX="13.0" layoutX="760.0" layoutY="111.0" startX="-38.0" startY="-0.486328125" />
+                        <Text fx:id="txtMaterial" layoutX="627.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Material">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="txtSize" layoutX="639.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Size">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="tfMaterial" layoutX="724.0" layoutY="147.0" />
+                        <TextField fx:id="tfSize" layoutX="724.0" layoutY="228.0" />
+                        <Text fx:id="txtType" layoutX="354.0" layoutY="397.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="tfType" layoutX="421.0" layoutY="380.0" />
+                        <Text fx:id="txtMinPlayers" layoutX="628.0" layoutY="397.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Minimum Number of Players">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="txtMaxPlayers" layoutX="628.0" layoutY="462.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Maximum Number of Players">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="txtDesigner" layoutX="628.0" layoutY="540.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Designer">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="tfMinPlayers" layoutX="642.0" layoutY="404.0" />
+                        <TextField fx:id="tfMaxPlayers" layoutX="642.0" layoutY="481.0" />
+                        <TextField fx:id="tfDesigner" layoutX="642.0" layoutY="553.0" />
+                        <Line endX="33.0" layoutX="459.0" layoutY="361.0" startX="-30.0" />
+                        <Line endX="62.0" layoutX="747.0" layoutY="361.0" startX="-31.0" />
+                        <ComboBox fx:id="cbCategory" layoutX="148.0" layoutY="97.0" prefWidth="150.0" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="tabRemToy" text="Remove Toy">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Text fx:id="txtEnterSN" layoutX="60.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Toy Serial Number">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="txtSN1" layoutX="87.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Serial Number">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="tfSN1" layoutX="101.0" layoutY="180.0" />
+                        <Button fx:id="btnRemove" layoutX="150.0" layoutY="320.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="104.0" text="Remove">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <ListView layoutX="345.0" layoutY="82.0" prefHeight="507.0" prefWidth="528.0" />
+                        <Line endX="320.0" layoutX="553.0" layoutY="82.0" startX="-208.0" />
+                        <Line endX="-100.0" endY="506.0" layoutX="445.0" layoutY="83.0" startX="-100.0" />
+                        <Line endX="427.0" endY="-1.0" layoutX="446.0" layoutY="590.0" startX="-100.0" />
+                        <Line endX="-100.0" endY="511.0" layoutX="973.0" layoutY="78.0" startX="-100.0" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+</BorderPane>
